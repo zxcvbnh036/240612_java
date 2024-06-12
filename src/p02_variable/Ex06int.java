@@ -26,7 +26,7 @@ public class Ex06int {
 
     // 3. 표현범위가 작은 것이 큰 것으로 올 때는 묵시적 형변환!
     long l2 = (long)200; // long=int, long l2=(long)200
-
+    //
     int i2 = (int) l2; // 큰 범위가 작은 범위로 올 때는 명시적 선언!
   }
 }
