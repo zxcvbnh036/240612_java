@@ -26,3 +26,16 @@ public class Animal {
     System.out.println(legs);
   }
 }
+
+// 하나의 파일에 main 메서드 복수 가능
+class Foo {
+  public static void main(String[] args) {
+
+  }
+}
+
+
+
+
+
+
