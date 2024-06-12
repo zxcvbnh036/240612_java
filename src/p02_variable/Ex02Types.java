@@ -23,6 +23,7 @@ public class Ex02Types {
   static int sum;
   int total;
 
+  // static = main method(시작점) 전에 로드됨 = new 같은 역할 ; 초기화 시켜줌
   public static void main(String[] args) {
     // 지역변수는 사용하기 위해서는 반드시 할당을 해야함
     boolean power = true; // 논리형, true, false 1byte
@@ -43,7 +44,6 @@ public class Ex02Types {
     System.out.println("============================");
     // 지역변수 = 선언 + 초기화 = 할당
     // 멤버변수 = 선언 + "new" or 할당도 가능(=new 제외)
-    // static = main method(시작점) 전에
 
     // 전역변수를 사용하기 위해서는 instance를 만들어야 한다.
     // ex02Types = instance
