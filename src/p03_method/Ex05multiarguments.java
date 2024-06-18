@@ -18,6 +18,5 @@ class MultiArguments {
   public void add(long n1, int...n) {System.out.println("...");}
   // 에러 :: public void add(int...n, int n2) {System.out.println("...");}
   public void add(Data ... data){
-
   }
 }
