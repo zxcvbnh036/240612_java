@@ -12,6 +12,7 @@ public class EX04CallByValue {
     System.out.println(d.value);
     change(500);   // 19번 라인 호출
     change(d.value);    // 19번 라인 호출
+    change((int)1.12f); // 19번 기본형 타입의 명시적 형변환
     change(d);          // 20번 라인 호출
     System.out.println(d.value);
   }
