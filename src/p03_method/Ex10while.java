@@ -73,7 +73,9 @@ public class Ex10while {
       } catch (Exception e) {
         continue;
       }
-      if ((you - me) == -2 || (you - me) == 1) {
+      if (me >= 3) {
+        System.out.println("다시 입력하세요.");
+      } else if ((you - me) == -2 || (you - me) == 1) {
         System.out.println("게임에서 이겼습니다.");
       } else if ((you - me) == -1 || (you - me) == 2) {
         System.out.println("게임에서 졌습니다.");
