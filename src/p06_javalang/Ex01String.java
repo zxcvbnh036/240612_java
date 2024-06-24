@@ -36,5 +36,6 @@ public class Ex01String {
     System.out.println(str1.indexOf("l"));
     System.out.println(str1.indexOf("l", 3));
     System.out.println(str1.lastIndexOf("l"));
+    System.out.println(str1.replace("l", "k"));
   }
 }
