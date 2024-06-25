@@ -1,5 +1,8 @@
 package p06_javalang;
 
+import java.util.Arrays;
+import java.util.StringJoiner;
+
 public class Ex01String {
   public static void main(String[] args) {
     String str2 = new String("hello");
@@ -37,5 +40,24 @@ public class Ex01String {
     System.out.println(str1.indexOf("l", 3));
     System.out.println(str1.lastIndexOf("l"));
     System.out.println(str1.replace("l", "k"));
+    System.out.println(str1.replace("o", ""));
+    String[] arr = "Passion is genesis of genius".split(" ");
+    System.out.println(Arrays.toString(arr));
+    String fileName = "abc.index.html";
+    System.out.println(fileName.substring(fileName.lastIndexOf(".") + 1));
+    System.out.println(fileName.substring(fileName.indexOf(".")+1, fileName.lastIndexOf(".")));
+    System.out.println("hello world".toUpperCase());
+    System.out.println("hello world".toLowerCase());
+    System.out.println("  hello world  ".trim());
+    System.out.println(String.valueOf(0b100));
+    System.out.println(String.valueOf(0010));
+    System.out.println(String.valueOf(0xa0));
+    StringJoiner sj = new StringJoiner(" ", "'", "'");
+    for (String s : arr) {
+      sj.add(s);
+    }
+    System.out.println(sj.toString());
+
+
   }
 }
