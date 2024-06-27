@@ -4,9 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Ex05Notepad {
   public static void main(String[] args) {
@@ -62,11 +60,36 @@ class Notepad extends JFrame {
           } catch (IOException ex) {
             throw new RuntimeException(ex);
           }
-
         }
       }
     });
+
+    //파일 저장하기
+    miSave.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        int ret = fc.showSaveDialog(miSave);
+        if (ret == 0) {
+          try {
+            File file = fc.getSelectedFile();
+            FileWriter writer = new FileWriter(fc.getSelectedFile().toString());
+            String text = textArea.getText();
+            writer.write(text);
+            writer.close();
+          } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+          } catch (IOException ex) {
+            throw new RuntimeException(ex);
+          }
+        }
+      }
+    });
+
+    miInfo.addActionListener(e -> {
+      new InfoDialog(this, true);
+    });
   }
+
   // 배치
   private void arrange() {
     menuF.add(miNew);menuF.add(miOpen);menuF.add(miSave);
@@ -85,3 +108,24 @@ class Notepad extends JFrame {
     setVisible(true);
   }
 }
+
+class InfoDialog extends JDialog {
+  public InfoDialog(JFrame fr, boolean modal) {
+    super(fr, modal);
+    JPanel pnl = new JPanel();
+    JLabel label = new JLabel("널 위해 만들었어");
+    pnl.add(label);
+    add(pnl, "Center");
+    setTitle("점보");
+    setSize(200, 100);
+    setLocationRelativeTo(this);
+    setVisible(true);
+  }
+}
+
+
+
+
+
+
+
