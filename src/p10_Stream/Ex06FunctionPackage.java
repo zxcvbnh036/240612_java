@@ -1,5 +1,7 @@
 package p10_Stream;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -43,5 +45,26 @@ public class Ex06FunctionPackage {
       }
     };
     predicate = integer -> integer % 2 == 0;
+
+    //응용
+    List<Integer> list = new ArrayList<>();
+    makeRandomList(supplier, list);
+    System.out.println(list);
+    printEven(predicate, consumer, list);
+    List<Integer> newList = doSomething(function, list);
+    System.out.println(newList);
+  }
+  private static <T> void makeRandomList(Supplier<T> supplier, List<T> list) {
+    for (int i = 0; i < 10; i++) list.add(supplier.get());
+  }
+  private static <T> List<T> doSomething(Function<T,T> function, List<T> list) {
+    List<T> tempList = new ArrayList<T>(list.size());
+    for(T item : list) tempList.add(function.apply(item));
+    return tempList;
+  }
+
+  private static <T> void printEven(Predicate<T> predicate, Consumer<T> consumer, List<T> list) {
+    for(T i: list) if(predicate.test(i)) consumer.accept(i);
+    System.out.println();
   }
 }
