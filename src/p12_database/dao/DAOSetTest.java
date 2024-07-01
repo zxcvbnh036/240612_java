@@ -18,4 +18,12 @@ public class DAOSetTest {
       daoSet.closeDB();
     }
   }
+  /*
+  create table members(
+    mno number,
+    id varchar2(20),
+    pass varchar2(20),
+    name varchar2(20),
+    mobile varchar2(20));
+  */
 }

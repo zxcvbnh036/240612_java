@@ -3,10 +3,10 @@ package p12_database.dao;
 import java.sql.*;
 
 public class DAOSet {
-  private Connection conn;
-  private PreparedStatement pstmt;
-  private Statement stmt;
-  private ResultSet rs;
+  protected Connection conn;
+  protected PreparedStatement pstmt;
+  protected Statement stmt;
+  protected ResultSet rs;
 
   public Connection connectDB() throws SQLException {
     //String driver ="jdbc:mariadb://127.0.0.1:3306/db7"; //maria db
