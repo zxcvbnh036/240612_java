@@ -1,4 +1,4 @@
-package p09_Thread;
+package p10_Thread;
 
 public class Ex02Synchronized {
   public static void main(String[] args) {

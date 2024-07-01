@@ -1,4 +1,4 @@
-package p10_Stream;
+package p08_Stream;
 
 public class Ex05Lambda01 {
   public static void main(String[] args) {

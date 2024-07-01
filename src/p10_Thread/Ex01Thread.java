@@ -1,4 +1,4 @@
-package p09_Thread;
+package p10_Thread;
 
 import javax.swing.*;
 

@@ -1,8 +1,7 @@
-package p08_IO;
+package p09_IO;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Ex06File {
   public static void main(String[] args) {

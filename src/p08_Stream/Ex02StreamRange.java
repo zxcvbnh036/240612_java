@@ -1,4 +1,4 @@
-package p10_Stream;
+package p08_Stream;
 
 import java.util.Random;
 import java.util.function.Consumer;

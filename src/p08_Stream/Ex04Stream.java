@@ -1,8 +1,6 @@
-package p10_Stream;
+package p08_Stream;
 
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Optional;
 import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
