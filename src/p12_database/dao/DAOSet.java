@@ -21,7 +21,7 @@ public class DAOSet {
       if (stmt != null) stmt.close();
       if (pstmt != null) pstmt.close();
       if (conn != null) conn.close();
-      System.out.println(conn.isClosed()?"접속종료":"접속중");
+//      System.out.println(conn.isClosed()?"접속종료":"접속중");
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
@@ -32,7 +32,6 @@ public class DAOSet {
     pass varchar2(20),name varchar2(20),
     mobile varchar2(20));
 
-    create SEQUENCE sq_members;
+    create sequence sq_members;
   */
-
 }
